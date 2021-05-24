@@ -7,7 +7,7 @@
 // For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 // Bonus: Can you do this in one pass?
-use std::collections::HashMap;
+use std::collections::HashSet;
 
 fn main() {
   let arr = [10, 15, 2, 1];
@@ -15,13 +15,13 @@ fn main() {
 }
 
 fn contains_additives(arr: &[i32], goal: i32) -> bool {
-  let mut num_map = HashMap::<i32,i32>::new();
+  let mut num_map = HashSet::<i32>::new();
   for member in arr {
     let remain = goal - *member;
-    if num_map.contains_key(&remain){
+    if num_map.contains(&remain){
       return true;
     }
-    num_map.insert(*member, *member);
+    num_map.insert(*member);
   }
   false
 }
