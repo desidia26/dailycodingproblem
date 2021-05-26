@@ -1,0 +1,14 @@
+[package]
+name = "may2021"
+version = "0.1.0"
+authors = ["Ben Banister <benjamin.d.banister@leidos.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "binary_tree"
+path = "src/lib/binary_tree.rs"
+
+
+[dependencies]
