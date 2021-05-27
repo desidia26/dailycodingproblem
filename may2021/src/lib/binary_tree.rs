@@ -45,39 +45,39 @@ impl Node<u32> {
 
 
     
-    pub fn serialize_tree(&self) -> String {
-        let mut result = String::from(self.value.to_string());
-        let mut node = self;
-        let mut callstack = vec![];
-        loop {
-            loop {
-                result.push_str(&node.value.to_string());
-                callstack.push(node);
-                if node.has_left() {
-                    node = node.left.as_ref().unwrap();
-                }
-                else {
-                    break;
-                }
-            }
-            if node.has_right() {
-                node = node.right.as_ref().unwrap();
-            }
-            else {
+//     pub fn serialize_tree(&self) -> String {
+//         let mut result = String::from(self.value.to_string());
+//         let mut node = self;
+//         let mut callstack = vec![];
+//         loop {
+//             loop {
+//                 result.push_str(&node.value.to_string());
+//                 callstack.push(node);
+//                 if node.has_left() {
+//                     node = node.left.as_ref().unwrap();
+//                 }
+//                 else {
+//                     break;
+//                 }
+//             }
+//             if node.has_right() {
+//                 node = node.right.as_ref().unwrap();
+//             }
+//             else {
 
-            }
-            // else {
-            //     if callstack.len() > 0 {
-            //         node = callstack.pop().as_ref().unwrap();
-            //     }
-            //     else {
-            //         break;
-            //     }
-            // }
-        }
-        result
-    }
-}
+//             }
+//             // else {
+//             //     if callstack.len() > 0 {
+//             //         node = callstack.pop().as_ref().unwrap();
+//             //     }
+//             //     else {
+//             //         break;
+//             //     }
+//             // }
+//         }
+//         result
+//     }
+// }
 
 pub fn deserialize(serialized_tree: String) -> Node<u32> {
     Node{
