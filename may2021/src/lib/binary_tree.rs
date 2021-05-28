@@ -77,16 +77,16 @@ impl Node<u32> {
 //         }
 //         result
 //     }
-// }
-
-pub fn deserialize(serialized_tree: String) -> Node<u32> {
-    Node{
-        left: Some(Box::new(Node {
-            left: None,
-            right: None,
-            value: 1
-        })),
-        right: None,
-        value: 26
-    }
 }
+
+// pub fn deserialize(serialized_tree: String) -> Node<u32> {
+//     Node{
+//         left: Some(Box::new(Node {
+//             left: None,
+//             right: None,
+//             value: 1
+//         })),
+//         right: None,
+//         value: 26
+//     }
+// }
