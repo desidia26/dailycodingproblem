@@ -5,7 +5,7 @@
 // Given the root to a binary tree, implement serialize(root), which serializes
 // the tree into a string, and deserialize(s), which deserializes the string
 // back into the tree.
-use binary_tree::Node;
+use local_lib::Node;
 
 fn main() {
     let root_node = Node{
