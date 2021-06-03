@@ -1,3 +1,9 @@
+pub struct Xorll {
+    pub next: Box<Xorll>,
+    pub prev: Box<Xorll>,
+    pub value: u32
+}
+
 pub struct Node<T> {
     pub left: Option<Box<Node<T>>>,
     pub right: Option<Box<Node<T>>>,
